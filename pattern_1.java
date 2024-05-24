@@ -1,5 +1,4 @@
 import java.util.*;
-
 public class pattern_1 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
@@ -15,7 +14,6 @@ public class pattern_1 {
         }
         int times = 0;
         for (int i = 1; i <= n; i++) {
-
             if (i <= (n / 2)) {
                 for (int j = 1; j <= (int) Math.pow(2, i); j++) {
                     System.out.print("*");
