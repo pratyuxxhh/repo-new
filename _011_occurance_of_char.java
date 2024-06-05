@@ -16,7 +16,7 @@ public class _011_occurance_of_char {
 
     }
     public static void Occurance(String str , int i , String c){
-        if (i==str.length()-1) {
+        if (i==str.length()) {
             return ;
         }
         if (str.charAt(i)==c.charAt(0)) {
