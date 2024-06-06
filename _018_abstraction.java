@@ -21,3 +21,6 @@ public class _018_abstraction {
         dg.specialAbility="smells well";
     }
 }
+
+
+// just few abstraction concepts

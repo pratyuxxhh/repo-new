@@ -22,3 +22,12 @@ public class pattern_2 {
         }
     }
 }
+// output : 
+// enter length of the rectangle :5
+// enter breadth of the rectangle :6
+// * * * * * 
+// *       * 
+// *       * 
+// *       * 
+// *       * 
+// * * * * * 
