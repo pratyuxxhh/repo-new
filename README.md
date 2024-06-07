@@ -1,4 +1,4 @@
 # repo-new
 learning java 
 <br>
-~pratyush parashar
+~Pratyush Parashar
