@@ -1,3 +1,7 @@
+
+// inheritance concept (which is also useless in this code )
+// but i  made it just for fun .
+
 import java.util.Scanner;
 class Galaxy{
         public String[] planetNames = { "mercury", "venus", "earth ", "mars", "jupiter", "saturn", "uranus ", "neptune" };
@@ -59,6 +63,3 @@ public class SolarSystem {
         }
     }
 }
-
-// inheritance concept (which is also useless in this code )
-// but i  made it just for fun .
