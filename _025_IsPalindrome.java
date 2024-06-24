@@ -4,59 +4,55 @@ import java.util.Scanner;
 
 public class _025_IsPalindrome {
     Node head;
-    class Node{
+
+    class Node {
         int data;
         Node nextNode;
-     
-        Node(int data){
+
+        Node(int data) {
             this.data = data;
-            this.nextNode= null;
-            
+            this.nextNode = null;
+
         }
     }
-    
-    public void addFirst(int data){
-        Node newNode = new Node(data);
-        
-        newNode.nextNode = head;
-        head = newNode;
-    }
-    public int size ( ){
+
+    public int size() {
         Node currNode = head;
-        int size = 0 ;
-        while (currNode!=null) {
-            size ++;
+        int size = 0;
+        while (currNode != null) {
+            size++;
             currNode = currNode.nextNode;
         }
         return size;
     }
-    public boolean isPalindrome(){
+
+    public boolean isPalindrome() {
         Node fakeCurrNode = head;
-        if (size()%2==0) {
-            for (int i = 0; i < size()/2; i++) {
+        if (size() % 2 == 0) {
+            for (int i = 0; i < size() / 2; i++) {
                 fakeCurrNode = fakeCurrNode.nextNode;
             }
             Node fakeHead = fakeCurrNode;
 
             Node currNode = fakeHead.nextNode;
-            Node prev =  fakeHead;
-        while (currNode!= null) {
-            
-            Node next = currNode.nextNode;
-            currNode.nextNode = prev;
+            Node prev = fakeHead;
+            while (currNode != null) {
 
-            prev = currNode;
-            currNode = next;
-        }
+                Node next = currNode.nextNode;
+                currNode.nextNode = prev;
 
-        fakeHead.nextNode=null;
-        fakeHead = prev;
-        fakeCurrNode = fakeHead;
+                prev = currNode;
+                currNode = next;
+            }
+
+            fakeHead.nextNode = null;
+            fakeHead = prev;
+            fakeCurrNode = fakeHead;
 
         }
         Node currNode = head;
-        while (fakeCurrNode!=null) {
-            if (currNode.data!=fakeCurrNode.data) {
+        while (fakeCurrNode != null) {
+            if (currNode.data != fakeCurrNode.data) {
                 return false;
             }
             currNode = currNode.nextNode;
@@ -64,30 +60,33 @@ public class _025_IsPalindrome {
         }
         return true;
     }
-    public void addLast(int data){
+
+    public void addLast(int data) {
         Node newnNode = new Node(data);
         Node currNode = head;
         if (currNode == null) {
             head = newnNode;
             return;
         }
-        while (currNode.nextNode!=null) {
+        while (currNode.nextNode != null) {
             currNode = currNode.nextNode;
         }
         currNode.nextNode = newnNode;
     }
-    public void printList(){
+
+    public void printList() {
         Node currentNode = head;
 
-        while (currentNode!=null) {
-            System.out.print(currentNode.data+ "->");
+        while (currentNode != null) {
+            System.out.print(currentNode.data + "->");
             currentNode = currentNode.nextNode;
         }
         System.out.println("null");
     }
+
     public static void main(String[] args) {
         _025_IsPalindrome list = new _025_IsPalindrome();
-        
+
         Scanner sc = new Scanner(System.in);
         int size = sc.nextInt();
         for (int i = 0; i < size; i++) {
